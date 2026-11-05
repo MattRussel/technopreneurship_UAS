@@ -1,0 +1,233 @@
+/* ===== My Reservations Page ===== */
+.my-reservations {
+  padding: 24px 16px 40px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.my-reservations__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.my-reservations__header h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.my-reservations__header p {
+  color: var(--text-light);
+  font-size: 0.85rem;
+}
+
+.refresh-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-light);
+  transition: all 0.2s;
+}
+
+.refresh-btn:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* Tabs */
+.res-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.res-tab {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1.5px solid var(--border);
+  background: white;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-light);
+  transition: all 0.2s;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.res-tab:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.res-tab--active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.res-tab__count {
+  font-size: 0.7rem;
+  background: rgba(0,0,0,0.08);
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.res-tab--active .res-tab__count {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Reservation Cards */
+.res-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.res-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.res-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.res-card__slot {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+.res-card__floor {
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: #F1F5F9;
+  padding: 2px 8px;
+  border-radius: 8px;
+  color: var(--text-light);
+}
+
+.res-card__status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.res-card__details {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.res-card__detail {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--text-light);
+}
+
+.res-card__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.res-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.res-card__plate {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.res-card__code {
+  font-size: 0.72rem;
+  color: var(--text-light);
+  font-family: monospace;
+}
+
+.res-card__cost {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.res-card__actions {
+  margin-top: 12px;
+}
+
+.res-cancel-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #FCA5A5;
+  background: rgba(239,68,68,0.05);
+  color: #EF4444;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.res-cancel-btn:hover {
+  background: #EF4444;
+  color: white;
+  border-color: #EF4444;
+}
+
+/* Empty State */
+.res-empty {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.res-empty__icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.res-empty h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.res-empty p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}

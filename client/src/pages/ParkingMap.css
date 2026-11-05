@@ -1,0 +1,291 @@
+/* ===== Parking Map Page ===== */
+.parking-map {
+  padding: 24px 16px 40px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.parking-map__header {
+  margin-bottom: 24px;
+}
+
+.parking-map__header h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.parking-map__header p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* Floor Tabs */
+.floor-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.floor-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  border: 2px solid var(--border);
+  background: var(--bg-card);
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 80px;
+  flex-shrink: 0;
+}
+
+.floor-tab:hover {
+  border-color: var(--primary);
+}
+
+.floor-tab--active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.floor-tab__label {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.floor-tab--active .floor-tab__label {
+  color: white;
+}
+
+.floor-tab__avail {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-top: 2px;
+}
+
+.floor-tab--active .floor-tab__avail {
+  color: rgba(255,255,255,0.75);
+}
+
+/* Stats Bar */
+.map-stats-bar {
+  display: flex;
+  gap: 20px;
+  padding: 12px 16px;
+  background: var(--bg-card);
+  border-radius: var(--radius-sm);
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+  flex-wrap: wrap;
+}
+
+.map-stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.map-stat__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Parking Grid */
+.parking-grid {
+  margin-bottom: 24px;
+}
+
+.parking-grid__aisle {
+  text-align: center;
+  padding: 8px;
+}
+
+.aisle-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-light);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.parking-grid__slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+  gap: 8px;
+  padding: 16px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+/* Individual Slot */
+.parking-slot {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.15s;
+  background: none;
+  padding: 2px;
+}
+
+.parking-slot--available {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: #059669;
+}
+
+.parking-slot--occupied {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.2);
+  color: #DC2626;
+}
+
+.parking-slot--reserved {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.25);
+  color: #2563EB;
+}
+
+.parking-slot--disabled.parking-slot--available {
+  background: rgba(245, 158, 11, 0.1);
+  border-color: rgba(245, 158, 11, 0.25);
+}
+
+.parking-slot--ev-charging.parking-slot--available {
+  background: rgba(16, 185, 129, 0.15);
+}
+
+.parking-slot--vip.parking-slot--available {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: rgba(139, 92, 246, 0.25);
+  color: #7C3AED;
+}
+
+.slot-number {
+  font-weight: 700;
+  font-size: 0.72rem;
+}
+
+.slot-type-icon {
+  font-size: 0.65rem;
+  opacity: 0.8;
+  margin-top: 1px;
+}
+
+/* Legend */
+.map-legend {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  box-shadow: var(--shadow);
+}
+
+.map-legend h3 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--text);
+}
+
+.legend-color {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+}
+
+/* Slot Detail in Modal */
+.slot-detail__status {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.slot-detail__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.slot-detail__info .detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.slot-detail__info .detail-row span {
+  color: var(--text-light);
+}
+
+.slot-detail__reserve-btn {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.slot-detail__reserve-btn:hover {
+  background: var(--primary-dark);
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+  .parking-grid__slots {
+    grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .parking-map {
+    padding: 32px 24px;
+  }
+  .parking-grid__slots {
+    grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+    gap: 10px;
+  }
+}

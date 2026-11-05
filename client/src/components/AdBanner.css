@@ -1,0 +1,511 @@
+/* ============================================================
+   Ad Banner & Promo Modal Styles
+   ============================================================ */
+
+.ad-banner {
+  margin: 0 0 28px 0;
+  width: 100%;
+}
+
+.ad-banner__card {
+  border-radius: var(--radius-lg, 16px);
+  padding: 18px 24px;
+  color: #FFFFFF;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.ad-banner__card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* Subtle glowing background accent */
+.ad-banner__card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Meta Top Row */
+.ad-banner__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.ad-sponsor-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ad-dot {
+  width: 7px;
+  height: 7px;
+  background: #10B981;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #10B981;
+}
+
+.ad-banner__controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ad-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.22);
+  padding: 3px 10px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+  letter-spacing: 0.02em;
+}
+
+.ad-dismiss-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.ad-dismiss-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+}
+
+/* Body */
+.ad-banner__body {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.ad-banner__icon-wrap {
+  width: 54px;
+  height: 54px;
+  min-width: 54px;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ad-banner__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.ad-banner__merchant {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 3px;
+  flex-wrap: wrap;
+}
+
+.ad-banner__merchant h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.ad-category {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.ad-banner__tagline {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0;
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Action Button */
+.ad-banner__action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ad-discount-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  background: #FEF08A;
+  color: #854D0E;
+  padding: 6px 12px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+}
+
+.ad-claim-btn {
+  background: #FFFFFF;
+  color: #1B2A4A;
+  border: none;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 9px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ad-claim-btn:hover {
+  background: #F8FAFC;
+  transform: scale(1.03);
+}
+
+/* Carousel Navigation */
+.ad-banner__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.ad-nav-arrow {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #FFFFFF;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ad-nav-arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.ad-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ad-dot-item {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.25s ease;
+}
+
+.ad-dot-item.active {
+  width: 20px;
+  border-radius: 10px;
+  background: #FFFFFF;
+}
+
+/* ============================================================
+   Voucher Detail Modal
+   ============================================================ */
+
+.promo-modal {
+  padding: 4px 0;
+}
+
+.promo-modal__header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.promo-modal__icon {
+  width: 48px;
+  height: 48px;
+  background: #F1F5F9;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.promo-modal__header h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary, #1B2A4A);
+  margin: 0;
+}
+
+.promo-modal__category {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-light, #64748B);
+}
+
+.promo-modal__desc {
+  font-size: 0.92rem;
+  color: var(--text, #1E293B);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Voucher Ticket Box */
+.voucher-ticket {
+  display: flex;
+  background: #F8FAFC;
+  border: 1.5px dashed #CBD5E1;
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.voucher-ticket__left {
+  flex: 1.2;
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #EFF6FF;
+}
+
+.voucher-discount {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #1D4ED8;
+  margin-bottom: 4px;
+}
+
+.voucher-sub {
+  font-size: 0.75rem;
+  color: #64748B;
+}
+
+.voucher-ticket__divider {
+  width: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voucher-ticket__divider .dashed-line {
+  width: 1px;
+  height: 70%;
+  border-left: 1.5px dashed #CBD5E1;
+}
+
+.notch {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  border: 1.5px dashed #CBD5E1;
+}
+
+.notch-top {
+  top: -10px;
+}
+
+.notch-bottom {
+  bottom: -10px;
+}
+
+.voucher-ticket__right {
+  flex: 1;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+}
+
+.voucher-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #94A3B8;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.voucher-code {
+  font-family: monospace;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0F172A;
+  letter-spacing: 0.05em;
+  background: #F1F5F9;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #E2E8F0;
+}
+
+.btn-copy-code {
+  background: #1B2A4A;
+  color: #FFFFFF;
+  border: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.btn-copy-code:hover {
+  background: #2C3E6B;
+}
+
+/* Promo Meta */
+.promo-meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.promo-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.86rem;
+  color: #475569;
+}
+
+.meta-icon {
+  color: #3B82F6;
+  font-size: 1.1rem;
+}
+
+.promo-meta-item strong {
+  margin-right: 6px;
+  color: #1E293B;
+}
+
+/* Instructions */
+.promo-instructions {
+  background: #F8FAFC;
+  padding: 14px 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.promo-instructions h4 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1E293B;
+  margin: 0 0 8px 0;
+}
+
+.promo-instructions ol {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.82rem;
+  color: #64748B;
+  line-height: 1.6;
+}
+
+.promo-modal__footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-done {
+  background: #1B2A4A;
+  color: #FFFFFF;
+  border: none;
+  padding: 11px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-done:hover {
+  background: #2C3E6B;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .ad-banner__body {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .ad-banner__action {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .voucher-ticket {
+    flex-direction: column;
+  }
+
+  .voucher-ticket__divider {
+    display: none;
+  }
+
+  .voucher-ticket__right {
+    border-top: 1.5px dashed #CBD5E1;
+  }
+}
+
